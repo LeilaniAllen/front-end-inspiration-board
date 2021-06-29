@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./Styles/App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import NewBoard from "./NewBoard";
-import Board from "./Board";
+import NewBoardForm from "./Component/NewBoardForm";
+import Board from "./Component/Board"
 
 function App() {
   const [results, setResults] = useState("");
@@ -35,7 +35,7 @@ function App() {
         >
           Learn React
         </a>
-        <NewBoard></NewBoard>
+        <NewBoardForm></NewBoardForm>
         <Board></Board>
       </header>
     </div>
