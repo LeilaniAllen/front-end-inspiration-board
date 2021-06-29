@@ -2,19 +2,23 @@ import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import NewBoard from "./NewBoard";
+import Board from "./Board";
 
 function App() {
   const [results, setResults] = useState("");
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BACKEND_URL}/boards`, {}).then((requestResult) => {
-      setResults(requestResult);
-    }).catch((err)=>{
-      setResults(JSON.stringify(err));
-    });
-
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/boards`, {})
+      .then((requestResult) => {
+        setResults(requestResult);
+      })
+      .catch((err) => {
+        setResults(JSON.stringify(err));
+      });
   }, []);
- 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -31,6 +35,8 @@ function App() {
         >
           Learn React
         </a>
+        <NewBoard></NewBoard>
+        <Board></Board>
       </header>
     </div>
   );
