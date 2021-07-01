@@ -126,7 +126,7 @@ function App() {
         )}
       </div>
       <footer>
-        <span>We Got This!</span> Click{" "}
+        <span>We Got This!</span>
       </footer>
     </div>
   );
