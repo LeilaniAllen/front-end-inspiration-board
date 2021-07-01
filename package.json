@@ -7,7 +7,11 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+<<<<<<< HEAD
     "dotenv": "^10.0.0",
+=======
+    "express": "^4.17.1",
+>>>>>>> 5374c617070a132f103ecb1daf306cf3e907fb4c
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
