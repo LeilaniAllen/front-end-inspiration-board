@@ -22,7 +22,7 @@ const CardsList = (props) => {
 
   const deleteCardItem = (card) => {
     axios
-      .delete(`${process.env.REACT_APP_BACKEND_URL}/cards/${card.card_id}`)
+      .delete(`${process.env.REACT_APP_BACKEND_URL}/boards/delete_card/${card.card_id}`)
       .then((response) => {
         const newCardsData = cardsData.filter((existingCard) => {
           return existingCard.card_id !== card.card_id;
@@ -37,7 +37,7 @@ const CardsList = (props) => {
 
   const plusOneCardItem = (card) => {
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/increase_likes/${card.card_id}`)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/boards/increase_likes/${card.card_id}`)
       .then((response) => {
         axios
           .get(

@@ -79,7 +79,11 @@ function App() {
   return (
     <div className="page__container">
       <div className="content__container">
-        <h1 className="inspiration-board">Inspiration Board</h1>
+        <h1 className="inspiration-board">
+          Inspiration Board
+          <span className="team-header">Ice-Ice-Baby </span>
+        </h1>
+
         <section></section>
         {/* This section holds the boards cards on header. */}
         <section className="boards-container">
@@ -99,7 +103,7 @@ function App() {
           </section>
           {/* Create A New Board box element */}
           <section className="new-board-form__container">
-            <h2>Create a New Board</h2>
+            <h2 class="resize-font" >Create a New Board</h2>
             {isBoardFormVisible ? (
               <NewBoardForm createNewBoard={createNewBoard}></NewBoardForm>
             ) : (
@@ -122,11 +126,7 @@ function App() {
         )}
       </div>
       <footer>
-        <span>This is a demo! Please be gentle!</span> Click{" "}
-        <span onClick={deleteAll} className="footer__delete-btn">
-          here
-        </span>{" "}
-        to delete all boards and cards!
+        <span>We Got This!</span> Click{" "}
       </footer>
     </div>
   );

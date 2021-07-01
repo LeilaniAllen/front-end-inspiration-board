@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("/src/images/ice2.jpg");
+  /* background-color: #E8F5FF; */
 }
 
 code {
@@ -13,30 +15,54 @@ code {
 }
 
 h1 {
-  color: rgb(111, 6, 143);
+  color: #385e72;
 }
 
-
+h2 {
+  flex: 1;
+  -ms-flex-item-align: space;
+  color: #8db2c6;
+  font-family: Impact;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 1px 2px rgb(104, 92, 240);
+}
 
 .boards-container {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
 .inspiration-board {
-  font-family: cursive;
-  margin-left: 125px;
+  font-family: Impact;
+  margin-left: 10px;
+  font-size: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.boards__list{
-  height:200px; 
-  overflow-y:scroll;
+.boards__list {
+  height: 300px;
+  overflow-y: scroll;
 }
-.new-board-form__form{
+.new-board-form__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.team-header-name {
+  font-size: 50px;
+  font-family: 'Times New Roman';
+  margin-top:15px;
+}
+
+.resize-font {
   
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2em;
-    width: 100%;
+  font-weight: bold;
+  text-shadow: 2px 1px 2px rgb(104, 92, 240);
 }
+

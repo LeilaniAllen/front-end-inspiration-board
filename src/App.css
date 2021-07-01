@@ -14,10 +14,103 @@ h1 {
   font-family:'Courier New';
 }
 
-h2 {
-  /* border-bottom: 10px solid lightgrey; */
-  
+<style type="text/css">
+
+.new-board-form__form{
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+.new-board-form__form label{
+	display:block;
+	margin-bottom: 10px;
+}
+.new-board-form__form label > span{
+	float: left;
+	width: 100px;
+	color: #F072A9;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.new-board-form__form fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	background: #b18ed3;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.new-board-form__form fieldset legend{
+	color: #a0fdff;
+	border-top: 1px solid #FFD2D2;
+	border-left: 1px solid #FFD2D2;
+	border-right: 1px solid #FFD2D2;
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	background: #7381eb;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	-moz-box-shadow:-0px -1px 2px #F1F1F1;
+	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+	font-weight: normal;
+	font-size: 12px;
+}
+.new-board-form__form textarea{
+	width:250px;
+	height:100px;
+}
+.new-board-form__form input[type=text],
+.new-board-form__form input[type=date],
+.new-board-form__form input[type=datetime],
+.new-board-form__form input[type=number],
+.new-board-form__form input[type=search],
+.new-board-form__form input[type=time],
+.new-board-form__form input[type=url],
+.new-board-form__form input[type=email],
+.new-board-form__form select, 
+.new-board-form__form textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #4c9bcd;
+	outline: none;
+	color: #b0dffc;
+	padding: 5px 8px 5px 8px;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	box-shadow: inset 1px 1px 4px ;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	-moz-box-shadow: inset 1px 1px 4px ;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	-webkit-box-shadow: inset 1px 1px 4px ;
+	background: #e1feff;
+	width:50%;
+}
+.new-board-form__form  input[type=submit],
+.new-board-form__form  input[type=button]{
+	background: #b0dffc;
+	border: 1px solid #245263;
+	padding: 5px 15px 5px 10px;
+	color: #0d0a37;
+	box-shadow: inset -1px -1px 3px #E8F5FF;
+	-moz-box-shadow: inset -1px -1px 3px #E8F5FF;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+  width: 70px;
+}
+.required{
+	color:red;
+	font-weight:normal;
+}
+</style>
 
 .boards__container {
   display: grid;
@@ -69,7 +162,7 @@ h2 {
 
 .card-item {
   font-family:'Courier New', Courier, monospace;
-  background-color:darkturquoise;
+  background-color:#D8FFFD;
   box-shadow: -10px 7px 7px lightgrey;
   min-height: 200px;
   display: flex;
@@ -119,4 +212,129 @@ footer {
 
 .content__container {
   flex: 1 0 auto;
+}
+
+
+
+.new-card-form__form{
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.new-card-form__form label{
+	display:block;
+	margin-bottom: 10px;
+}
+.new-card-form__form label > span{
+	float: left;
+	width: 100px;
+	color: #F072A9;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.new-card-form__form fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	background: #b18ed3;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.new-card-form__form fieldset legend{
+	color: #0d0a37;
+	
+	border-top: 1px solid #FFD2D2;
+	border-left: 1px solid #FFD2D2;
+	border-right: 1px solid #FFD2D2;
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	background: #7381eb;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	-moz-box-shadow:-0px -1px 2px #F1F1F1;
+	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+	font-weight: normal;
+	font-size: 12px;
+}
+.new-card-form__form textarea{
+	width:250px;
+	height:100px;
+}
+.new-card-form__form input[type=text],
+.new-card-form__form input[type=date],
+.new-card-form__form input[type=datetime],
+.new-card-form__form input[type=number],
+.new-card-form__form input[type=search],
+.new-card-form__form input[type=time],
+.new-card-form__form input[type=url],
+.new-card-form__form input[type=email],
+.new-card-form__form select, 
+.new-card-form__form textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #4c9bcd;
+	outline: none;
+	color: #1101f6;
+  ;
+	padding: 5px 8px 5px 8px;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	box-shadow: inset 1px 1px 4px ;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	-moz-box-shadow: inset 1px 1px 4px ;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	-webkit-box-shadow: inset 1px 1px 4px ;
+	background: #e1feff;
+	width:50%;
+}
+.new-card-form__form  input[type=submit],
+.new-card-form__form  input[type=button]{
+	background: #b0dffc;
+	border: 1px solid #245263;
+	padding: 5px 15px 5px 10px;
+	color: #5e58ac;
+	box-shadow: inset -1px -1px 3px #E8F5FF;
+	-moz-box-shadow: inset -1px -1px 3px #E8F5FF;
+	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
+	border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+  width: 70px;
+}
+.required{
+	color:red;
+	font-weight:normal;
+}
+
+
+
+.h1 {
+    margin: 50px auto;
+    border: 5px solid #fff;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.4), 0px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.content__container {
+    width: 250px;
+    height: 250px;
+}
+.h1:before {
+    content: "";
+    height: 25px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transform: translateX(-30%) translateY(10%) rotate(-45deg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }
