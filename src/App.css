@@ -10,7 +10,7 @@ h1,h2 {
 }
 
 h1 {
-  background-color:darkturquoise;
+  background-color:rgb(187, 217, 249);
   font-family:'Courier New';
 }
 
@@ -79,7 +79,7 @@ h1 {
 	-moz-border-radius: 3px;
 	border: 1px solid #4c9bcd;
 	outline: none;
-	color: #b0dffc;
+	color: #4612c9;
 	padding: 5px 8px 5px 8px;
 	-webkit-box-shadow: inset -1px -1px 3px #E8F5FF;
 	box-shadow: inset 1px 1px 4px ;
@@ -92,7 +92,7 @@ h1 {
 }
 .new-board-form__form  input[type=submit],
 .new-board-form__form  input[type=button]{
-	background: #b0dffc;
+	background: #bbdff6;
 	border: 1px solid #245263;
 	padding: 5px 15px 5px 10px;
 	color: #0d0a37;
