@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Inspiration Board:
+This is a website that allows you to create inspirational boards with notes. 
+
+Created using Javascript/React for front-end and Python for back-end.
+
+Demo link: http://ice-ice-inspo-board.herokuapp.com
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
