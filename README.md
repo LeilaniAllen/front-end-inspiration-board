@@ -22,6 +22,7 @@ Canva Slide Presentation: https://www.canva.com/design/DAEi_mbu8HI/ivOCNb491BLiz
 * Create new inspration cards for each board
 * Add likes to each card
 * Delete cards from Message Boards
+* Sends notification on slack when someone posts a new board and or card
 
 ### Managing Dependencies
 
