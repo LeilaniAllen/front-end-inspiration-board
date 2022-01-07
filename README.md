@@ -5,6 +5,8 @@ Created using Javascript/React for front-end and Python for back-end.
 
 Demo link: http://ice-ice-inspo-board.herokuapp.com
 
+Canva Slide Presentation: https://www.canva.com/design/DAEi_mbu8HI/ivOCNb491BLizeBCBZDVMg/view?utm_content=DAEi_mbu8HI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
