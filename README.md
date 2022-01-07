@@ -7,73 +7,139 @@ Demo link: http://ice-ice-inspo-board.herokuapp.com
 
 Canva Slide Presentation: https://www.canva.com/design/DAEi_mbu8HI/ivOCNb491BLizeBCBZDVMg/view?utm_content=DAEi_mbu8HI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
-## Getting Started with Create React App
+<img width="1245" alt="Screen Shot 2022-01-06 at 9 00 21 PM" src="https://user-images.githubusercontent.com/62310329/148495575-b3965295-1269-42ff-ac81-9b1f2d3fb561.png">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<img width="964" alt="Screen Shot 2022-01-06 at 8 51 37 PM" src="https://user-images.githubusercontent.com/62310329/148495717-701ce175-7c16-4ca0-9d98-5f87364a232d.png">
+
+
+
+<img width="1096" alt="Screen Shot 2022-01-06 at 8 52 07 PM" src="https://user-images.githubusercontent.com/62310329/148495701-95d28f4f-ae4e-46a9-8418-9cb547c3d873.png">
+
+### Feature Set
+
+* Create new Message Boards
+* Create new inspration cards for each board
+* Add likes to each card
+* Delete cards from Message Boards
+
+### Managing Dependencies
+
+Inspiration Board relies on:
+```bash
+  - React 
+  - Axios
+  - Flask
+  - Yarn
+  - SQLAlchemy
+  ```
+
+## Front-end Environment & Set-up
+
 
 In the project directory, you can run:
 
-### `yarn start`
+```bash
+$ npx create-react-app .
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Add `axios`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Install axios:
 
-### `yarn test`
+```bash
+$ yarn add axios
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Creating a `.env` File
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Create a file named `.env`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The front-end layer needs to send API requests to the back-end layer. In order to handle this, the front-end layer repo **must** include a `.env` file with this line:
 
-### `yarn eject`
+```
+REACT_APP_BACKEND_URL=http://localhost:5000
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Use this environment variable to send your API requests. You can read it by using the expression `process.env.REACT_APP_BACKEND_URL`. For example, we may use it like this in any component:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+axios.get(`${process.env.REACT_APP_BACKEND_URL}/ice-ice-inspo-board`, {
+    // ...
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This will make Heroku deployment easier.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Commit and Push
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Commit and push your files to your repo, especially including the `package.json` file!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+</details>
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Back-End Environment & Set-up
 
-### Analyzing the Bundle Size
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The goal for setup is to cover all of the set up needed at the beginning of this project, which includes:
 
-### Making a Progressive Web App
+1. Forking and cloning
+1. Managing dependencies
+1. Setting up development and test databases
+1. Setting up a `.env` file
+1. Running `$ flask db init`
+1. Running `$ flask run` and `$ FLASK_ENV=development flask run`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Requirements
 
-### Advanced Configuration
+### Fork and Clone
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork this project repo to your own personal account
+1. Clone this new forked project
 
-### Deployment
+### Managing Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Create a virtual environment:
 
-### `yarn build` fails to minify
+```bash
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ # You're in activated virtual environment!
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Install dependencies (we've already gathered them all into a `requirements.txt` file):
+
+```bash
+(venv) $ pip install -r requirements.txt
+```
+
+### Setting Up Development and Test Databases
+
+Create a database:
+
+1. A development database named `your_database_name`
+
+### Creating a `.env` File
+
+Create a file named `.env`.
+
+Create two environment variables that will hold your database URLs.
+
+1. `SQLALCHEMY_DATABASE_URI` to hold the path to your development database
+1. [OPTIONAL] `SQLALCHEMY_TEST_DATABASE_URI` to hold the path to your development database
+
+Your `.env` may look like this:
+
+```
+SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://postgres:postgres@localhost:5432/your_database_name
+```
+
+
+
+
+
+
+
